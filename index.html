@@ -1,0 +1,88 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid text-center bg-info text-white">
+                    <div class="container">
+                        <h1 class="display-4">Train Time!</h1>
+                        <p class="lead">No stopping the hype train!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Current Train Schedule
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainStation">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Add a Train
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label>Train Name</label>
+                        <input type="text" class="form-control" id="trainName" placeholder="Thomas">
+                    </div>
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Epicenter">
+                    </div>
+                    <div class="form-group">
+                        <label>First Train Time (hh:mm -military time)</label>
+                        <input type="text" class="form-control" id="first" placeholder="17:38">
+                    </div>
+                    <div class="form-group">
+                        <label>Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="95">
+                    </div>
+                    <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
+                </form>
+            </div>
+        </div>
+        <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/logic.js"></script>
+</body>
+
+</html>
